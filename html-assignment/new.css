@@ -1,0 +1,9 @@
+/*css starts below */
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif, serif;
+    font-size: 18px;
+}
+header, footer {
+    background-color: red;
+}
