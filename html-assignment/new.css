@@ -4,23 +4,25 @@ body {
 }
 
 header, footer {
-    background-color: pink;
+    background-color: rgb(219, 147, 159);
+    border: 2px solid white;
+    padding: 10px;
 }
 
 .site-title {
-    color: blue;
+    color: rgb(36, 36, 117);
 }
 
 #my-image {
     box-shadow: 0px 0px 2px 1px black;
 }
 
-.hobby-list {
+.hobby-list  {
     list-style-type: square;
 }
 
 .hobby-list li:nth-child(odd) {
-    background-color: green;
+    background-color: rgb(124, 170, 124);
 }
 
 .no-underline {
@@ -29,7 +31,17 @@ header, footer {
 
 .no-bullets {
     list-style-type: none;
-    padding: 0;
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid rgb(71, 61, 61);
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.no-bullets p {
+    width: 89%;
+    margin: 0 auto;
 }
 
 .bg-border {
@@ -43,6 +55,10 @@ header, footer {
 }
 
 .add-color {
-    background-color: yellow;
-    border: 2px solid red;
+    background-color: rgb(245, 245, 152);
+    border: 4px solid rgb(205, 128, 195);
+}
+
+footer p {
+    text-align: right;
 }
