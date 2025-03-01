@@ -1,0 +1,153 @@
+/* Main CSS file for Lone Starfish website */
+
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #aad4cf; /* Primary color as specified */
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 90px;
+}
+
+/* Header styles */
+header {
+    position: relative; /* For positioning the text on the image */
+    text-align: center;
+    color: white;
+    margin-bottom: 0;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+header h1 {
+    position: absolute; /* Overlay text on top of the image */
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    font-weight: normal;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #e9fffd; /* 比背景色浅 */
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav li {
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    border-right: 1px solid #888;
+    display: block;
+    padding: 0 10px;
+}
+
+nav li:last-child a {
+    border-right: none;
+} 
+
+/* Main content area */
+main {
+    background-color: #e9fffd;
+    padding: 10px;
+    margin-bottom: 0px; /*不用改了，已经跟footer接上了 */
+}
+
+h2 {
+    margin: 20px 0;
+    font-weight: normal;
+}
+
+/* Article styles - for the Life of a Starfish section */
+article img {
+    width: 200px;
+    height: auto;
+    float: left;
+    margin: 0 20px 30px 0;
+}
+
+article p {
+    /* text-align: left; */
+    line-height: 1.4
+}
+
+/* Facts section */
+section ul {
+    margin-left: 15px;
+    line-height: 1.2;
+}
+
+/* Contact form styles */
+.contact-form {
+    margin-top: 40px;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}   
+
+.contact-form form {
+    border: 1px solid rgb(5, 5, 5); /* 给整个表单添加1px黑色边框 */
+    padding: 15px; /* 添加内边距，使内容不贴着边框 */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.form-group textarea {
+    height: 100px;
+}
+
+.form-group label {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+button {
+    background-color: #e9fffd;
+    border: 1px solid #888;
+    padding: 15px 10px;
+    }
+
+/* Footer styles */
+footer {
+    text-align: right;
+    padding: 30px 35px;
+    background-color: #e9fffd; /* 与其他内容区域的背景色一致 */
+    margin-bottom: 10px; /* 距离页面底部30px */
+}
