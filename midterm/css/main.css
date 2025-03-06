@@ -1,23 +1,66 @@
-/* Main CSS file for Lone Starfish website */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-/* Global styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+/*ol, ul {
+	list-style: none;
+} */
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
+
+/* This is the main CSS file for the website to change styles of content */
+/* body style set the font family, background color, max width and margin of the whole body content*/
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #aad4cf; /* Primary color as specified */
+    background-color: #aad4cf; /* primary color as specified in the assignment */
     max-width: 1024px;
     margin: 0 auto;
     padding: 0 90px;
 }
 
-/* Header styles */
+/* Header styles are content above the navigation bar incl the banner image and h1 */
 header {
-    position: relative; /* For positioning the text on the image */
+    position: relative; /* for positioning the text on the image */
     text-align: center;
     color: white;
     margin-bottom: 0;
@@ -30,27 +73,27 @@ header img {
 }
 
 header h1 {
-    position: absolute; /* Overlay text on top of the image */
+    position: absolute; /* overlay text on top of the image */
     top: 67%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2em;
+    font-size: 2.3em;
     font-weight: normal;
 }
 
-/* Navigation styles */
+/* Below part is to set styles for navigation area */
 nav {
-    background-color: #e9fffd; /* 比背景色浅 */
+    background-color: #DFF2EF; /* color checked in adobe color to get the exactly same color code as given by example*/
 }
 
 nav ul {
-    display: flex;
-    list-style-type: none;
+    display: flex; 
+    list-style-type: none; /* remove the dots in the nav bar */
 }
 
 nav li {
     float: left;
-    width: 33.3%;
+    width: 33.3%; /* 3 items in the nav bar/ 100/3=33.33% */
     text-align: center;
     padding: 5px 0;
 }
@@ -64,58 +107,58 @@ nav a {
 }
 
 nav li:last-child a {
-    border-right: none;
+    border-right: none; /* remove the border from the last item */
 } 
 
-/* Main content area */
+/* This part to set style for main content area incl story and contact form */
 main {
-    background-color: #e9fffd;
+    background-color: #DFF2EF;
     padding: 10px;
-    margin-bottom: 0px; /*不用改了，已经跟footer接上了 */
+    margin-bottom: 0px; /* remove the margin from the bottom and connect to footer*/
 }
 
 h2 {
+    font-size: 1.4em;
     margin: 20px 0;
     font-weight: normal;
 }
 
-/* Section styles - for the Life of a Starfish section */
+/* Section style - for Life of a Starfish section */
 section img {
     width: 180px;
     height: 180px;
     float: left;
-    margin: 0 20px 30px 0;
+    margin: 0 20px 20px 0;
 }
 
 section p {
-    /* text-align: left; */
     line-height: 1.6;
     font-size: 0.8em;
 }
 
-/* Facts section */
+/* Section style - for Facts About Starfish section */
 section ul {
     margin-left: 15px;
     line-height: 1.2;
     font-size: 0.8em;
 }
 
-/* Contact form styles */
+/* Section style - for Contact Form section */
 .contact-form {
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 .contact-form h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }   
 
 .contact-form form {
-    border: 1px solid rgb(5, 5, 5); /* 给整个表单添加1px黑色边框 */
-    padding: 15px; /* 添加内边距，使内容不贴着边框 */
+    border: 1px solid rgb(5, 5, 5); /* add 1px outline for the whole form */
+    padding: 15px 30px 15px 10px /* inside the 1px box padding */
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .form-group label {
@@ -123,47 +166,47 @@ section ul {
     margin-bottom: 5px;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
+.form-group input[type="text"], /* set the width, padding and border for the input text box in html */
+.form-group input[type="email"], /* set the width, padding and border for the input email box in html*/
 .form-group textarea {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     border: 1px solid #ccc;
 }
 
 .form-group textarea {
-    height: 100px;
+    height: 50px;
 }
 
 .form-group input[type="radio"] {
-    vertical-align: middle; /* 使圆圈与文字的底部对齐 */
-    margin-left: 5px;
+    vertical-align:bottom; /* the tick circle can be alighed with words bottom */
+    margin-left: 3px;
+    margin-right: -10px; /* to control the space between the radio button and the text based on example given*/
 }
 
 .form-group label {
     display: inline-block;
-    vertical-align: middle; /* 使 label 的文字与输入框对齐 */
-    margin: 5px 5px; /* 控制 label 的上下间距 */
-    margin-left: 0;
-    line-height: normal; /* 如果需要，调整 line-height 来微调 */
+    margin: 5px; /* to control line space*/
     font-size: 0.8em;
 
 }
 
 button {
-    background-color: #e9fffd;
+    font-size: 8px;
+    background-color: #DFF2EF;
     border: 1px solid #888;
-    padding: 15px 10px;
+    padding: 8px 6px;
 }
 
 button:hover {
-    background-color: #bcc256;
+    background-color: #85cfdf;
 }
 
-/* Footer styles */
+/* Below is the footer styles, the copyright is righ-aligned, with proper margin and padding to contact form and the body bottom */
 footer {
+    font-size: 11px;
     text-align: right;
-    padding: 30px 35px;
-    background-color: #e9fffd;
-    margin-bottom: 10px; 
+    padding: 10px 35px 25px;
+    background-color: #DFF2EF;
+    margin-bottom: 15px; 
 }
