@@ -87,7 +87,7 @@ nav {
 }
 
 nav ul {
-    display: flex; 
+    display: flex;
     list-style-type: none; /* remove the dots in the nav bar */
 }
 
