@@ -1,0 +1,46 @@
+
+.welcome {
+    position: relative;
+}
+
+.welcome image {
+    display: block;
+
+}
+
+.welcome-part {
+
+
+    background-color: rgb(178, 173, 173);
+
+    position: absolute;
+
+
+    top: 60%;
+
+
+    left: 40%;
+
+
+    transform: translate(-50%, -50%);
+
+
+    color: white;
+
+
+    font-size: 24px;
+
+
+    font-weight: bold;
+
+
+    z-index: 10;
+
+
+}
+
+.welcome-button {
+    background-color: black;
+        padding: 30px 20px;
+    margin: 20px 80px;
+}
