@@ -1,71 +1,116 @@
-/* Base Styles - Mobile First Approach */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* This is the main CSS file for the website to change styles of content */
+/* CSS starts from mobile first styles, set the default format for style from start */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-body {
+body { /* default body style with background color and font */
     font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
+    line-height: 1.8;
     color: #222;
 }
 
-img {
+img { /* default image style with 100% wide and display block */
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-a {
+ a { /* remove link decoration */
     text-decoration: none;
 }
 
-ul {
-    list-style: none;
-}
-
-.container {
+.container { /* default container style with max width and padding */
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
 }
 
-h1 {
+h1 { /* default h1 style with font size and weight */
     font-weight: 800;
     font-size: 50px;
 }
 
-h2 {
+h2 { /* default h2 style */
     font-weight: 700;
     font-size: 35px;
     margin: 10px 0;
 }
 
-h3 {
+h3 { /* default h3 style */
     font-size: 24px;
+    font-weight: 700;
     margin: 5px 0;
 }
 
-p {
+p { /* default all paragraph style */
     margin-bottom: 10px;
     font-size: 14px;
 }
 
-.btn {
+.btn { /* default button to keep its own space but not the whole line */
     display: inline-block;
     font-size: 16px;
 }
 
-/* Header Styles */
+/* below is the setting for Header, incl the logo, nav and container in mobile style */
 header {
     background-color: #222;
     color: #fff;
     padding: 15px 0;
 }
 
-header .container {
+header .container { /* make sure elements in header can align vertically*/
     display: flex;
     flex-direction: column;
 }
@@ -80,7 +125,7 @@ header .container {
     width: 70px;
 }
 
-nav ul {
+nav ul { /* make sure elements in nav list can align vertically */
     display: flex;
     flex-direction: column;
 }
@@ -90,11 +135,11 @@ nav ul li {
     margin-bottom: 5px;
 }
 
-nav ul li a {
+nav ul li a { 
     color: #c78c06;
     padding: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* center the text in mobile view */
 }
 
 nav ul li a.homebtn {
@@ -109,7 +154,7 @@ nav ul li a.homebtn {
 }
 
 .search-bar input {
-    flex: 1;
+    flex: 1; /* take the majority of the space */
     padding: 8px 10px;
     border: 1px solid #222;
 }
@@ -120,12 +165,12 @@ nav ul li a.homebtn {
     padding: 8px 8px;
 }
 
-.search-bar button i {
+.search-bar button i { /* change icon color in search bar */
     color: #c78c06;
 }
 
 
-/* welcome Section */
+/* below is the style for Welcome Section, incl a banner, overlapping a container and text in it */
 .welcome {
     position: relative;
     width: 100%;
@@ -135,6 +180,7 @@ nav ul li a.homebtn {
     width: 100%;
 }
 
+/* set position for the container to be absolute, so it can overlap the image, remove the padding */
 .welcome .container {
     position: absolute;
     top: 0;
@@ -142,10 +188,11 @@ nav ul li a.homebtn {
     right: 0;
     height: 100%;
     display: flex;
-    align-items: center; /* 垂直居中 */
+    align-items: center;
     padding: 0;
 }
 
+/* add style for the welcome content in the container, incl the text and button */
 .welcome-content {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 10px;
@@ -153,14 +200,15 @@ nav ul li a.homebtn {
     width: 100%;
 }
 
+/* add style for "connect with us" button */
 .welcome-content .btn {
     background-color: #c78c06;
     color: #222;
     padding: 15px 30px;
-    display: inline-block;
+    margin-top: 25px;
 }
 
-/* About Section */
+/* below is the style for About Us Section, set the container style and img in center */
 .about {
     background-color: #ffe6ac;
     padding: 20px 0;
@@ -175,25 +223,24 @@ nav ul li a.homebtn {
     margin: auto;
 }
 
-/* Services Section */
+/* below set the style for Services Section */
 .service-item {
-    margin-bottom: 15px;
-    width: 100%;
+    margin-bottom: 15px; 
+    width: 100%; 
 }
 
 .service-img img {
     width: 100%;
-    display: block; /* 移除图片底部可能的空白间隙 */
+    display: block; /* make sure the image is block level */
 }
 
-.service-content {
+.service-content { /* set the content style in service section */
     padding: 20px 10px;
     background-color: #ffe6ac;
     width: 100%;
-    box-sizing: border-box; /* 确保内边距不会增加宽度 */
 }
 
-.service-content .btn {
+.service-content .btn { /* set the button style in service section */
     background-color: #222;
     color:white;
     padding: 20px 25px;
@@ -201,7 +248,7 @@ nav ul li a.homebtn {
 
 
 
-/* Vision Section - Flexbox 实现 */
+/* below set style for Vision Section, with main img at bottom, overlay the h2, p and button */
 .vision {
     position: relative;
     color: white;
@@ -215,9 +262,10 @@ nav ul li a.homebtn {
 .img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 确保图片覆盖整个容器 */
+    object-fit: cover; /* make sure the img show the right scale since it was cut */
 }
 
+/* set the container style to be absolute, so it can overlap the image, and can be aligned on left side */
 .vision .container {
     position: absolute;
     top: 0;
@@ -226,9 +274,10 @@ nav ul li a.homebtn {
     bottom: 0;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* 内容靠左对齐 */
+    justify-content: flex-start;
 }
 
+/* set the text style in vision section */
 .vision-content {
     padding: 20px;
     max-width: 80%;
@@ -237,30 +286,21 @@ nav ul li a.homebtn {
     gap: 15px;
 }
 
+/* set the button style in vision section,the btn stay in its block, align left, and the words is in center */
 .vision .btn {
     background-color: #222;
     border: 2px solid #c78c06;
     color: white;
     padding: 15px 25px;
-    align-self: flex-start; /* 按钮左对齐 */
+    align-self: flex-start;
     display: inline-flex;
     align-items: center;
     gap: 10px;
 }
 
-
-
-/* Team Section */
+/* below set the style for Team Section */
 .team {
     background-color: white;
-}
-
-.team-member :nth-child(2) {
-    margin-bottom: 10px;
-}
-
-.team-info .position {
-    border-top: #c78c06 2px solid;
 }
 
 .team-info {
@@ -269,6 +309,7 @@ nav ul li a.homebtn {
 
 .team-info .title {
     font-weight: 700;
+    border-bottom: #c78c06 2px solid;
 }
 
 .team-info h3 {
@@ -284,8 +325,7 @@ nav ul li a.homebtn {
     width:100%;
 }
 
-
-/* Contact Section */
+/* below set the style for Contact Section, incl a contact form, a table and a map */
 .contact {
     background-color: white;
 }
@@ -313,6 +353,7 @@ nav ul li a.homebtn {
     height: 100px;
 }
 
+/* set the style for table in contact section */
 .table-header {
     background-color: #ffe6ac;
 }
@@ -323,7 +364,7 @@ nav ul li a.homebtn {
 
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* remove the space between cells */
 }
 
 table th, table td {
@@ -333,7 +374,7 @@ table th, table td {
 }
 
 
-/* below is map part */
+/* set the style for map */
 .map {
     margin-top: 10px;
     height: 350px;
@@ -346,7 +387,7 @@ table th, table td {
 }
 
 
-/* Footer */
+/* below set the style for Footer */
 footer {
     background-color: #222;
     color: #c78c06;
@@ -362,12 +403,12 @@ footer a {
     color: #c78c06;
     text-decoration: underline;
 }
+/* this is the end for mobile style setting */
 
-
-
-/* Media Query for tablets and up */
+/* below add Media Query style for the screen size of 760px and above */
 @media (min-width: 760px) {
-    /* Header */
+    
+    /* set the header style, incl the logo, nav and container, nav li flex in row, remove logo background color */
     header .container {
         flex-direction: row;
         justify-content: space-between;
@@ -398,33 +439,34 @@ footer a {
         width: 200px;
     }
 
-
+    /* add style for welcome section, the banner img will be bigger but cut some ratio,
+    the transparent container will add padding on sides */
     .welcome-img img {
-        height: 600px; /* 增加图片高度 */
-        object-fit: cover; /* 保持比例填充 */
+        height: 600px;
+        object-fit: cover; 
     }
     
     .welcome-content {
-        padding: 80px; /* 增加内边距 */
+        padding: 80px; 
     }
     
     .welcome-content h1 {
-        font-size: 65px; /* 增加标题字体大小 */
+        font-size: 65px; 
     }
 
 
-    /* About Section */
+    /* below set style for About Section, use grid template, layout into 2 column and 2 rows */
     .about .container {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* 改为相等宽度 */
-        grid-template-rows: auto auto; /* 自动行高 */
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto; 
         grid-gap: 10px;
-        align-items: start; /* 顶部对齐 */
+        align-items: start; 
     }
     
     .about-img {
         grid-column: 1;
-        grid-row: 1 / 3; /* 跨越第一行和第二行 */
+        grid-row: 1 / 3; 
     }
     
     .about h2 {
@@ -437,7 +479,7 @@ footer a {
         grid-row: 2;
     }
     
-    
+    /* below set style for Services Section, use grid areas to change layout */
     .services .container {
         display: grid;
         grid-template-areas: 
@@ -448,16 +490,14 @@ footer a {
         gap: 10px;
     }
         
-        /* 设置标题的网格区域 */
     .services .container h2 {
         grid-area: heading;
         text-align: left;
     }
         
-        /* 所有服务项目的基本样式 */
-    .service-item {
-        display: flex;
-        flex-direction: column; /* 图片在上，内容在下 */
+    .service-item { /* set the service item style to flex in column */
+        display: flex; 
+        flex-direction: column; 
     }
         
     #digital {
@@ -480,14 +520,14 @@ footer a {
         grid-area: print;
     }
     
+    /* set btn style to take one line in media query style, and center the text */
     .service-content .btn {
-        display: block; /* 改为块级元素，自动撑满父容器宽度 */
-        width: 100%; /* 确保宽度100% */
-        text-align: center; /* 文本居中对齐 */
+        display: block; 
+        width: 100%; 
+        text-align: center;
     }
 
-    
-    
+    /* set style for Team Section, use grid area to layout */
     .team .container {
         display: grid;
         grid-template-areas:
@@ -519,7 +559,7 @@ footer a {
     }
 
     
-    /* Contact Section */
+    /* set style for Contact Section, use grid column and row to rearrange the position */
     .contact .container {
         display: grid;
         grid-template-columns: 1fr 1fr;
