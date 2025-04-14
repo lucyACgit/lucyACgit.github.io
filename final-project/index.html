@@ -1,225 +1,247 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lu000215 final project</title>
 
-
-    <!-- adding icon link for the webpage -->
-    <script src="https://kit.fontawesome.com/5382aabf0b.js" crossorigin="anonymous"></script>
-
-    <link href="css/main.css" rel="stylesheet">
-</head>
-<body>
+    <!-- add Google Fonts 'Open Sans' for the webpage according to request-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <!-- below is the header part including logo, nav list and seach bar -->
-    <header id="home" class="site-header">
-        <div class="logo-container">
-            <img src="images/logo.png" alt="brand logo" class="logo">
-            
-            <nav class="site-nav">
+    <!-- adding icon link for the webpage -->
+   <script src="https://kit.fontawesome.com/5382aabf0b.js" crossorigin="anonymous"></script>   
+   
+   <!-- link CSS to the HTML doc-->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- below is Header Section with logo on the left top, and 5 nav list, a search bar follows -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Three Star Media Logo">
+            </div>
+            <nav>
                 <ul>
-                    <li class="home-link"><a href="#home">Home</a></li> <!-- home link needs special style -->
+                    <li><a href="#home" class="homebtn">Home</a></li>
                     <li><a href="#about">About Us</a></li>
-                    <li><a href="#service">Services</a></li>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="search-bar">
-                    <input type="search" placeholder="search">
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
             </nav>
+        <div class="search-bar">
+            <input type="search" placeholder="search">
+            <!-- add search icon at the end of the search bar area -->
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
-    </header>    
+        </div>
+    </header>
 
-    <!-- below is the main part including main contents -->
-    <main>
+<!-- below starts the main content of the webpage, frist the the Welcome Section -->
+<section class="welcome">
+    <div class="welcome-img">
+        <img src="images/main-banner.jpg" alt="Banner Image">
+    </div>
+    
+    <!-- above the welcome banner, there is a contaniner with h1, welcome intro text, a button -->
+    <div class="container">
+        <div class="welcome-content">
+            <h1>Welcome to Three Star Media</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+            <a href="#contact" class="btn">Connect with us <i class="fa-solid fa-caret-right"></i></a>
+        </div>
+    </div>
+</section>
 
-        <!-- welcome part needs to overlap the banner pictue with the contents -->
-        <div class="welcome">
-            <img src="images/main-banner.jpg" alt="banner image" class="banner image">
-            <div class="welcome-part">
-                <h1>Welcome to Three Star Media</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus distinctio praesentium animi illum error quas magnam ab quisquam. Iste et nam reprehenderit ea earum aut culpa possimus ipsa ab maxime.</p>
-                <div class="welcome-button">
-                    <a href="#contact">Connect with us <i class="fa-solid fa-caret-right"></i></a>
+    <!-- below is the About Us Section, with a picture, h2 and two paragraphs --> 
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-img">
+                <img src="images/about-us.jpg" alt="About Us">
+            </div>
+            <h2>About Us</h2>
+            <div class="about-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptas voluptatem deserunt minus. Quisquam obcaecati facilis aperiam sapiente! Exercitationem optio provident earum incidunt totam maxime porro amet quibusdam veniam unde.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- below is the 5 Services Section, contains 5 different div to wrap 5 services part -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            
+            <!-- this is the first type of service, Digital Transformation Service -->
+            <div class="service-item" id="digital">
+                <div class="service-img">
+                    <img src="images/digital.jpg" alt="Digital Transformation">
+                </div>
+                <div class="service-content">
+                    <h3>Digital Transformation</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    <a href="#" class="btn">Digital Plans <i class="fa-solid fa-caret-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- this is the second type of service, Marketing Service -->
+            <div class="service-item" id="marketing">
+                <div class="service-img">
+                    <img src="images/marketing.jpg" alt="Marketing">
+                </div>
+                <div class="service-content">
+                    <h3>Marketing</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    <a href="#" class="btn">Marketing Plans <i class="fa-solid fa-caret-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- this is the third service, Video Production Service -->
+            <div class="service-item" id="video">
+                <div class="service-img">
+                    <img src="images/video.jpg" alt="Video Production">
+                </div>
+                <div class="service-content">
+                    <h3>Video Production</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    <a href="#" class="btn">Video Plans <i class="fa-solid fa-caret-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- this is the forth service, Web Development Service -->
+            <div class="service-item" id="web">
+                <div class="service-img">
+                    <img src="images/web.jpg" alt="Web Development">
+                </div>
+                <div class="service-content">
+                    <h3>Web Development</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    <a href="#" class="btn">Web Plans <i class="fa-solid fa-caret-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- this is the fifth service, Print Service -->
+            <div class="service-item" id="print">
+                <div class="service-img">
+                    <img src="images/print.jpg" alt="Print">
+                </div>
+                <div class="service-content">
+                    <h3>Print</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    <a href="#" class="btn">Print Plans <i class="fa-solid fa-caret-right"></i></a>
                 </div>
             </div>
         </div>
-        
-        <!-- this part is the introduction of the company -->
-        <div id="about">
-            <h2>About Us</h2>
-            <img src="images/about-us.jpg" alt="about us">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, quo omnis eum, ducimus soluta asperiores numquam sapiente sunt fugiat provident dolore minima sed cum autem cupiditate illo animi labore ipsam!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos eaque libero quas incidunt, vel atque laboriosam! Illo dolorem, ut ullam magni pariatur dolores quos excepturi labore numquam, possimus saepe ducimus.</p>
+    </section>
+
+    <!-- below is a new section, Vision Section, with a picture, h2 and a paragraph -->
+    <section class="vision">
+        <div class="img-container">
+            <img src="images/vision.jpg" alt="Vision">
         </div>
-
-        <!-- this part includes five services provide, each section include one service item -->
-        <div id="services" class="services">
-            <h2>Our Services</h2>
-                <!-- below is the digital transformation service -->
-                <section id="service1">
-                    <img src="images/digital.jpg" alt="digital service">
-                    <div class="digital-plan box">
-                        <h3>Digital Transformation</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magni exercitationem numquam voluptatum! Corporis quis ipsum quia mollitia laboriosam pariatur incidunt reprehenderit beatae doloremque cupiditate rem, accusantium sequi nostrum qui.</p>
-                        <div class="digital-button">
-                            <a href="#">Digital Plan <i class="fa-solid fa-caret-right"></i></a>
-                        </div>
-                    </div>
-                </section>
-                 
-                <!-- below is the marketing service -->
-                <section id="service2">
-                    <img src="images/marketing.jpg" alt="marketing service">
-                    <div class="marketing-plan box">
-                        <h3>Marketing</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae qui incidunt magnam ab temporibus excepturi sunt dolorum ducimus aliquid quo, repellendus, esse illo beatae ullam nemo debitis eveniet nostrum! Sed.</p>
-                        <div class="marketing-button">
-                            <a href="#">Marketing Plan <i class="fa-solid fa-caret-right"></i></a>
-                        </div>
-                    </div>
-                </section>
-                
-                <!-- below is the video production service -->
-                <section id="service3">
-                    <img src="images/video.jpg" alt="video plan">
-                    <div class="video-plan box">
-                        <h3>Video Production</h3>
-                        <p>Amet ipsum soluta minima sunt aspernatur magnam natus, culpa nulla quos? Illo sed incidunt autem distinctio quos, quae non, laborum rerum repellat doloremque eos cum fuga sint quibusdam, ullam modi?</p>
-                        <div class="video-button">
-                            <a href="#">Video Plan <i class="fa-solid fa-caret-right"></i></a>
-                        </div>
-                    </div>
-                </section>
-                
-                <!-- below is the web development service -->
-                <section id="service4">
-                    <img src="images/web.jpg" alt="web Development">
-                    <div class="web-plan box">
-                        <h3>Web Development</h3>
-                        <p>Quam velit corrupti incidunt nemo et ipsum dolores explicabo impedit, nesciunt, veritatis fugit libero suscipit doloribus, praesentium esse. Suscipit possimus officiis cupiditate vero repellendus nisi expedita asperiores optio? Facere, odit?</p>
-                        <div class="web-button">
-                            <a href="#">Web Plan <i class="fa-solid fa-caret-right"></i></a>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- below is the print service -->
-                <section id="service5">
-                    <img src="images/print.jpg" alt="print plan">
-                    <div class="print-plan box">
-                        <h3>Print</h3>
-                        <p>Suscipit blanditiis, tempore ipsum eligendi modi distinctio laborum eum architecto recusandae ab sequi iure, quasi ipsa. Vero laboriosam magni eaque quaerat aperiam cupiditate illo sunt quam hic, magnam nostrum. Doloremque.</p>
-                        <div class="print-button">
-                            <a href="#">Print Plan <i class="fa-solid fa-caret-right"></i></a>
-                        </div>
-                    </div>
-                </section> 
+        <!-- the words are overlay on the picture -->
+        <div class="container">
+            <div class="vision-content">
+                <h2>Our Vision</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                <a href="#services" class="btn">Learn More <i class="fa-solid fa-caret-right"></i></a>
+            </div>
         </div>
-        
-        <!-- this part includes the vision of the company, picture and text needs overlap-->
-        <div id="our-vision" class="services">
-            <h3>Our Vision</h3>
-                <img src="images/vision.jpg" alt="team vision">
-                <div class="vision box">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime corrupti adipisci numquam exercitationem incidunt molestiae a omnis, quisquam cum asperiores! Est eveniet animi repellendus porro, a nulla assumenda sapiente eum!</p>
-                    <div class="vision-button">
-                        <a href="#">Vision Plan <i class="fa-solid fa-caret-right"></i></a>
-                    </div>
-                </div>
-        </div>
+    </section>
 
-        <!-- this part includes the team members, each section includes one member -->
-        <div id="team" class="services">
-            <section>
-                <h2>Our Team</h2>
-                <img src="images/john.jpg" alt="team member1">
-                <div class="John box">
-                    <h3>John Doe</h3>
-                    <p>CEO and Co-owner</p>
-                    <div class="John-intro">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ut hic dolorum blanditiis consectetur vel sit quidem adipisci porro non, sapiente reprehenderit modi corrupti natus qui enim praesentium placeat. Esse.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <img src="images/bob.jpg" alt="team member2">
+    <!-- below is team section with 4 parts, 2 pictures of each  team member, follows his introduction-->
+    <section class="team" id="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            
+            <!-- this is the first team member part for John Doe -->
+            <div id="john-img" class="team-img">
+                <img src="images/john.jpg" alt="John Doe">
+            </div>
+            
+            <div id="john-info" class="team-info">
+                <h3>John Doe</h3>   
+                <p class="title">CEO and Co-owner</p>
+                <p class="position">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam corrupti fuga illo corporis aperiam aut repudiandae minus nam? Unde minima atque iusto voluptates totam! Quo corrupti numquam amet distinctio aliquam.</p>
+            </div>
+            
+            <!-- this is the second team member part for Bob Rite -->
+            <div id="bob-img" class="team-img">
+                <img src="images/bob.jpg" alt="Bob Rite">
+            </div>
+            
+            <div id="bob-info" class="team-info">
                 <h3>Bob Rite</h3>
-                <div class="Bob box">
-                    <p>CFO and Co-owner</p>
-                    <div class="Bob-intro">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus. Quod, cumque! Quisquam, voluptatibus. Quod, cumque! Quisquam, voluptatibus. Quod, cumque! Quisquam, voluptatibus. Quod, cumque!</p>
-                    </div>
-                </div>
-            </section>
+                <p class="title">CFO and Co-owner</p>
+                <p class="position">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia error nobis deserunt praesentium, quod voluptate aut nisi fuga iure animi ea qui repudiandae reprehenderit labore quis sed, expedita illum sapiente?</p>
+            </div>
         </div>
+    </section>
 
-        
-        <!-- below part provide contact methods -->
-        <div id="contact" class="services">
-            <section id="contact-us">
-                <h2>Contact Us</h2>
+
+    <!-- below is the Contact Section, with 1 message sheet, 1 table of oeprations, 1 map information -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            
+            <!-- this is the Contact Form with 3 types of questions: name,email,message-->
+            <div class="contact-form">
                 <h3>Send us a message</h3>
                 <form>
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name">
                     </div>
-                    
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email">
                     </div>
-                    
                     <div class="form-group">
                         <label for="message">Message</label>
                         <textarea id="message" name="message"></textarea>
                     </div>
-                    <button type="submit">SEND</button>
+                    <button type="submit" class="btn">Send</button>
                 </form>
-            </section>
-
-            <section>
-                <h3>Hours of Operation</h3>
+            </div>
+            
+            <!-- this is the Hours of Operation in table format-->
+            <div class="hours">
+                <h3>Hours of operation</h3>
                 <table>
-                    <thead>
-                      <tr>
+                    <tr class="table-header">
                         <th>Days</th>
                         <th>Hours</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
+                    </tr>
+                    <tr>
                         <td>Monday - Friday</td>
-                        <td>9AM - 6PM</td>
-                      </tr>
-                      <tr>
+                        <td>9 AM - 6 PM</td>
+                    </tr>
+                    <tr>
                         <td>Saturday - Sunday</td>
                         <td>Closed</td>
-                      </tr>
-                    </tbody>
-                  </table>
-            </section>
-
-
-            <section class="services">
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- this is the Location in map, map link is embedded from Google map -->
+            <div class="location">
                 <h3>Location</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.948845794237!2d-75.75794948842764!3d45.349844870951614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20-%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1743118277536!5m2!1sen!2sca" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </section>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.948845794237!2d-75.75794948842764!3d45.349844870951614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20-%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1743118277536!5m2!1sen!2sca" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
         </div>
+    </section>
 
-    </main>
-    <!-- this is the end of main content, below is the footer and copyright -->
+    <!-- this is the end of the main sections, below is the footer with copyright information and link to Unsplash -->
+     
     <footer>
-        <p>&copy; Copyright Three Star Media,2020</p>
+        <div class="container">
+        <p>&copy; Copyright Three Star Media, 2020</p>
+        <p>All images are taken from <a href="https://unsplash.com" target="_blank">Unsplash</a></p>
+        </div>
     </footer>
-    <p>All images are taken from <a href="https://unsplash.com" target="_blank">Unsplash</a>.</p>
-
 </body>
 </html>
-
